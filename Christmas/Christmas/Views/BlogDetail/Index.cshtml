@@ -31,7 +31,7 @@
                         <div class="blog-item">
 
                             <!-- Image -->
-                            <div class="~/img"><img src="~/img/blog/details.jpg" alt="blog"></div>
+                            <div class="~/img"><img src="~/img/blog/@Model.Blog.Images.FirstOrDefault(m=>m.IsMain).Image" alt="blog"></div>
 
                             <!-- Content -->
                             <div class="content fix">
@@ -43,22 +43,20 @@
                                 <h4 class="title">@Model.Blog.Title</h4>
 
                                 <!-- Decs -->
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney Colleg Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and goingthrough the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thisbook is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                                <p>@Model.Blog.Desc</p>
 
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
 
-                                <blockquote class="blockquote mt-20 mb-50">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at den-Sydney Colleg Virginia, looked up one of the more obscure Latin words, consectetur.</p>
-                                </blockquote>
+                                
 
                                 <div class="row row-5 mb-20">
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-1.jpg" alt=""></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-2.jpg" alt=""></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-3.jpg" alt=""></div>
+                                    @foreach (var item in Model.Blog.Images.Where(m=>!m.IsMain).ToList())
+                                    {
+                                        <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/@item.Image" alt=""></div>
+
+                                    }
                                 </div>
 
-                                <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thisbook is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
+                                <p>@Model.Blog.Desc</p>
                             </div>
 
                         </div><!-- Blog Item End-->
@@ -186,6 +184,8 @@
                         <!-- Titel -->
                         <h4 class="sidebar-title">Recent Post</h4>
 
+
+
                         <!-- Sdebar Post -->
                         <div class="sidebar-post fix">
                             <!-- Image -->
@@ -232,13 +232,12 @@
 
                         <!-- Tag Cloud -->
                         <div class="tag-cloud fix">
-                            <a href="#">Bestsellers</a>
-                            <a href="#">Gifts</a>
-                            <a href="#">New</a>
-                            <a href="#">Christmas gift</a>
-                            <a href="#">Festive cakes</a>
-                            <a href="#">Home decor</a>
-                            <a href="#">Toys</a>
+                            @foreach (var tag in Model.Tags)
+                            {
+                                <a href="#">@tag.Name</a>
+                            }
+                            
+                            
                         </div>
 
                     </div>

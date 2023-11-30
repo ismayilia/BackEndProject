@@ -1,4 +1,5 @@
 ﻿using Christmas.Models;
+using Christmas.ViewModels.Tag;
 
 namespace Christmas.ViewModels.Blog
 {
