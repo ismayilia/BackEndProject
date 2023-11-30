@@ -53,6 +53,7 @@ namespace Christmas.Controllers
                 Blogs = blogs,
                 Products = products
             };
+            //salam
 
             int productCount = await _productService.GetCountAsync();
             ViewBag.count = productCount;
