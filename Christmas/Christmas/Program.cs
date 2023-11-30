@@ -24,6 +24,7 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 

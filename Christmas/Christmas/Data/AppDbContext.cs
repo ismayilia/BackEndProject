@@ -18,6 +18,9 @@ namespace Christmas.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<BlogTag> BlogTags { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -29,6 +32,9 @@ namespace Christmas.Data
             modelBuilder.Entity<Blog>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Tag>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<BlogImage>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Product>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
 
         }
     }

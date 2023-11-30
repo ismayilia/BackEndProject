@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TWcGXu3Uqo1D9Je6O/JU3y5peVi95ru8Y7WlalkZY7E=",
+  "Hash": "l0mvPhtdOSsuu0eHhRDOa/TgT6zdKCSn0Ol5f0Nlup0=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -16522,6 +16522,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\popper.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\js\\product.js",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\js\\vendor\\jquery-1.12.0.min.js",
