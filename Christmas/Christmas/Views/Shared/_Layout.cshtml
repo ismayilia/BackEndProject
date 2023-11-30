@@ -1,4 +1,11 @@
-﻿<!doctype html>
+﻿@inject ILayoutService _layoutService;
+
+@{
+
+	HeaderVM headerDatas = _layoutService.GetHeaderDatas();
+	FooterVM footerDatas = _layoutService.GetFooterDatas();
+}
+<!doctype html>
 <html class="no-js" lang="en">
 
 
@@ -57,7 +64,7 @@
 
 									<!-- Header Logo -->
 									<div class="header-logo col-md-4 col-12">
-										<a asp-controller="Home" asp-action="Index" class="logo"><img src="~/img/logo.png" alt="logo"></a>
+										<a asp-controller="Home" asp-action="Index" class="logo"><img src="~/img/@headerDatas.Logo" alt="logo"></a>
 									</div>
 
 									<!-- Account Menu -->
@@ -124,7 +131,7 @@
 
 							<!-- Header Bottom Logo -->
 							<div class="header-bottom-logo">
-								<a asp-controller="Home" asp-action="Index" class="logo"><img src="~/img/logo.png" alt="logo"></a>
+								<a asp-controller="Home" asp-action="Index" class="logo"><img src="~/img/@headerDatas.Logo" alt="logo"></a>
 							</div>
 
 							<!-- Main Menu -->
@@ -138,7 +145,7 @@
 											<li><a href="product-details.html">product details</a></li>
 										</ul>
 									</li>
-									<li><a href="about.html">about</a></li>
+									<li><a asp-controller="About" asp-action="Index">about</a></li>
 									<li>
 										<a href="#">pages</a>
 										<ul class="sub-menu">
@@ -242,10 +249,10 @@
 									<h4 class="widget-title">Contact Us</h4>
 
 									<ul>
-										<li><span>Address:</span> ur address goes here,street Crossroad 123</li>
-										<li><span>Phone:</span> +99 859 658 589 . +69 587 456 25</li>
-										<li><span>Eax:</span> +55 784 7585 . + 985 698 586</li>
-										<li><span>Email:</span> christ@email.com</li>
+										<li><span>Address:</span> @footerDatas.Address</li>
+										<li><span>Phone:</span> @footerDatas.Phone</li>
+										<li><span>Eax:</span> @footerDatas.Eax</li>
+										<li><span>Email:</span> @footerDatas.Email</li>
 									</ul>
 
 								</div>

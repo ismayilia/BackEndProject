@@ -25,6 +25,12 @@ builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ILayoutService, LayoutService>();
+builder.Services.AddScoped<ISettingService, SettingService>();
+
 
 var app = builder.Build();
 

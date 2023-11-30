@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Christmas.Models;
+using Christmas.ViewModels.About;
 using Christmas.ViewModels.Advert;
 using Christmas.ViewModels.Blog;
 using Christmas.ViewModels.Product;
@@ -20,6 +21,10 @@ namespace Christmas.Helpers.Mappings
 
             CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
                                            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
+            CreateMap<About, AboutVM>();
+            CreateMap<Team, TeamVM>();
+            CreateMap<Brand, BrandVM>();
+
         }
     }
 }
