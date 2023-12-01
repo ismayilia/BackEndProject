@@ -1,7 +1,7 @@
-﻿using Christmas.Data;
+﻿using Christmas.Areas.Admin.ViewModels.Slider;
+using Christmas.Data;
 using Christmas.Models;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Slider;
 using Microsoft.EntityFrameworkCore;
 
 namespace Christmas.Services

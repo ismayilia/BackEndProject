@@ -1,8 +1,8 @@
-﻿using Christmas.ViewModels.Contact;
+﻿using Christmas.Areas.Admin.ViewModels.Contact;
 
 namespace Christmas.Services.Interfaces
 {
-	public interface IContactService
+    public interface IContactService
 	{
 		Task<ContactVM> GetData();
 	}

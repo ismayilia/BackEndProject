@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.Blog;
 using Christmas.Data;
 using Christmas.Models;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Advert;
-using Christmas.ViewModels.Blog;
+using Christmas.Areas.Admin.ViewModels.Advert;
 using Microsoft.EntityFrameworkCore;
 
 namespace Christmas.Services

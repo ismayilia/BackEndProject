@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.Contact;
 using Christmas.Data;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Contact;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Christmas.Controllers
 {
-	public class ContactController : Controller
+    public class ContactController : Controller
 	{
 		private readonly AppDbContext _context;
 		private readonly ISettingService _settingService;

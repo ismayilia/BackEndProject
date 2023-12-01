@@ -1,6 +1,6 @@
-﻿using Christmas.ViewModels.About;
-using Christmas.ViewModels.Advert;
-using Christmas.ViewModels.Blog;
+﻿using Christmas.Areas.Admin.ViewModels.About;
+using Christmas.Areas.Admin.ViewModels.Advert;
+using Christmas.Areas.Admin.ViewModels.Blog;
 
 namespace Christmas.Services.Interfaces
 {

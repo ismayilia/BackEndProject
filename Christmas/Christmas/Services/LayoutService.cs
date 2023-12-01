@@ -1,5 +1,5 @@
-﻿using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Layout;
+﻿using Christmas.Areas.Admin.ViewModels.Layout;
+using Christmas.Services.Interfaces;
 
 namespace Christmas.Services
 {

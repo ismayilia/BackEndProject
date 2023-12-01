@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l0mvPhtdOSsuu0eHhRDOa/TgT6zdKCSn0Ol5f0Nlup0=",
+  "Hash": "cIGbU+w0m7PoB/4WLo3oNKmynFUnvq2sGg2AriTQXuk=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -15570,6 +15570,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\banners\\2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\banners\\5c4d3ecb-f12c-44ca-8a5b-efb22a1de5f6 - chnel-logo - Copy.png",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/banners/5c4d3ecb-f12c-44ca-8a5b-efb22a1de5f6 - chnel-logo - Copy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banners\\5c4d3ecb-f12c-44ca-8a5b-efb22a1de5f6 - chnel-logo - Copy.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\bg\\footer-bg.png",

@@ -1,11 +1,11 @@
-﻿using Christmas.Data;
+﻿using Christmas.Areas.Admin.ViewModels.Advert;
+using Christmas.Areas.Admin.ViewModels.Blog;
+using Christmas.Areas.Admin.ViewModels.Home;
+using Christmas.Areas.Admin.ViewModels.Product;
+using Christmas.Areas.Admin.ViewModels.Review;
+using Christmas.Areas.Admin.ViewModels.Slider;
+using Christmas.Data;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Advert;
-using Christmas.ViewModels.Blog;
-using Christmas.ViewModels.Home;
-using Christmas.ViewModels.Product;
-using Christmas.ViewModels.Review;
-using Christmas.ViewModels.Slider;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Christmas.Controllers

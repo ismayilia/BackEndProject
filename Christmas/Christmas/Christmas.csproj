@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\HP\Desktop\BackEndProject\Christmas\Christmas\ViewModels\.editorconfig" />
     <None Include="wwwroot\Admin\assets\css\maps\style.css.map" />
     <None Include="wwwroot\Admin\assets\fonts\Assistant\Assistant-Bold.woff2" />
     <None Include="wwwroot\Admin\assets\fonts\Assistant\Assistant-ExtraBold.woff2" />

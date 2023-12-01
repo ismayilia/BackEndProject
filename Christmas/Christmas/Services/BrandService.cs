@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.About;
 using Christmas.Data;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.About;
 using Microsoft.EntityFrameworkCore;
 
 namespace Christmas.Services

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.Review;
 using Christmas.Data;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Advert;
-using Christmas.ViewModels.Review;
+using Christmas.Areas.Admin.ViewModels.Advert;
 using Microsoft.EntityFrameworkCore;
 
 namespace Christmas.Services

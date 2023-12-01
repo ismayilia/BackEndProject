@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.Contact;
 using Christmas.Data;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.About;
-using Christmas.ViewModels.Contact;
+using Christmas.Areas.Admin.ViewModels.About;
 using Microsoft.EntityFrameworkCore;
 
 namespace Christmas.Services
 {
 
-	public class ContactService : IContactService
+    public class ContactService : IContactService
 	{
 		private readonly AppDbContext _context;
 		private readonly IMapper _mapper;

@@ -1,4 +1,4 @@
-﻿using Christmas.ViewModels.Layout;
+﻿using Christmas.Areas.Admin.ViewModels.Layout;
 
 namespace Christmas.Services.Interfaces
 {

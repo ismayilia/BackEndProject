@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.Blog;
+using Christmas.Areas.Admin.ViewModels.Tag;
 using Christmas.Data;
 using Christmas.Models;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Blog;
-using Christmas.ViewModels.Tag;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

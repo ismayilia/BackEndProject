@@ -1,7 +1,7 @@
-﻿using Christmas.Data;
+﻿using Christmas.Areas.Admin.ViewModels.About;
+using Christmas.Data;
 using Christmas.Services;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.About;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Christmas.Controllers

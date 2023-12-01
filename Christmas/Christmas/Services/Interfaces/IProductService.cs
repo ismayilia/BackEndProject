@@ -1,4 +1,4 @@
-﻿using Christmas.ViewModels.Product;
+﻿using Christmas.Areas.Admin.ViewModels.Product;
 
 namespace Christmas.Services.Interfaces
 {

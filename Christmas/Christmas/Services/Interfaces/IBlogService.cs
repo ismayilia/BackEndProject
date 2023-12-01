@@ -1,5 +1,5 @@
-﻿using Christmas.ViewModels.Blog;
-using Christmas.ViewModels.Review;
+﻿using Christmas.Areas.Admin.ViewModels.Blog;
+using Christmas.Areas.Admin.ViewModels.Review;
 
 namespace Christmas.Services.Interfaces
 {

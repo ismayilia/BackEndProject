@@ -1,6 +1,6 @@
-﻿using Christmas.Helpers;
+﻿using Christmas.Areas.Admin.ViewModels.Product;
+using Christmas.Helpers;
 using Christmas.Services.Interfaces;
-using Christmas.ViewModels.Product;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Christmas.Controllers
