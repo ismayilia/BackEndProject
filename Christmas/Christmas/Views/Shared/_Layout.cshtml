@@ -1,7 +1,6 @@
 ﻿@inject ILayoutService _layoutService;
 
 @{
-
 	HeaderVM headerDatas = _layoutService.GetHeaderDatas();
 	FooterVM footerDatas = _layoutService.GetFooterDatas();
 }
@@ -162,7 +161,7 @@
 											<li><a href="blog-details.html">blog details</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">contact</a></li>
+									<li><a a asp-controller="Contact" asp-action="Index">contact</a></li>
 								</ul>
 							</nav>
 

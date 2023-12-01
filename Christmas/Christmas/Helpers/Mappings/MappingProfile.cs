@@ -3,6 +3,7 @@ using Christmas.Models;
 using Christmas.ViewModels.About;
 using Christmas.ViewModels.Advert;
 using Christmas.ViewModels.Blog;
+using Christmas.ViewModels.Contact;
 using Christmas.ViewModels.Product;
 using Christmas.ViewModels.Review;
 using Christmas.ViewModels.Tag;
@@ -24,7 +25,8 @@ namespace Christmas.Helpers.Mappings
             CreateMap<About, AboutVM>();
             CreateMap<Team, TeamVM>();
             CreateMap<Brand, BrandVM>();
+			CreateMap<ContactInfo, ContactVM>();
 
-        }
+		}
     }
 }

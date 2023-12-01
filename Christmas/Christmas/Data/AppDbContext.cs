@@ -25,7 +25,10 @@ namespace Christmas.Data
         public DbSet<Team> Teams { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Setting> Settings { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		public DbSet<ContactEmail> ContactEmails { get; set; }
+		public DbSet<ContactInfo> ContactInfos { get; set; }
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
@@ -43,6 +46,8 @@ namespace Christmas.Data
             modelBuilder.Entity<Team>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Setting>().HasQueryFilter(m => !m.SoftDeleted);
-        }
+            modelBuilder.Entity<ContactInfo>().HasQueryFilter(m => !m.SoftDeleted);
+			modelBuilder.Entity<ContactEmail>().HasQueryFilter(m => !m.SoftDeleted);
+		}
     }
 }
