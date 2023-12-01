@@ -257,7 +257,8 @@
 						</a>
 						<div class="collapse" id="form-elements">
 							<ul class="nav flex-column sub-menu">
-								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Brand" asp-action="Index">Brands</a></li>
+								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Brand" asp-action="Index">Brand</a></li>
+								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Team" asp-action="Index">Team</a></li>
 							</ul>
 						</div>
 					</li>
@@ -366,5 +367,6 @@
 	<!-- Custom js for this page-->
 	<script src="~/admin/js/dashboard.js"></script>
 	<!-- End custom js for this page-->
+	@RenderSection("script", required:false)
 </body>
 </html>
