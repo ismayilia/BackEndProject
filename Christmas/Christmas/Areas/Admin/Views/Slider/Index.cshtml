@@ -1,0 +1,71 @@
+﻿@model List<SliderVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h1 class="text-center mt-3 mb-3">Sliders</h1>
+    <a class="btn btn-success text-white" asp-action="Create">Create</a>
+    <div class="table-responsive w-100">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Discount
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <img style="width:100px; height:100px" src="~/img/hero/@item.Image" alt="image" />
+                        </td>
+                        <td>
+                            @item.Discount
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+
+                            @if(item.Desc != null){
+                                @item.Desc.Substring(0, (int)Math.Ceiling(item.Desc.Length * 0.1))
+                            }
+                            
+                            
+                        </td>
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a class="btn btn-outline-primary mx-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <form class="d-inline-block" method="post">
+                                <button type="submit" class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
