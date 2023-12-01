@@ -32,6 +32,7 @@ namespace Christmas.Helpers.Mappings
             CreateMap<Slider, SliderEditVM>().ReverseMap();
             CreateMap<Advert, AdvertCreateVM>().ReverseMap();
             CreateMap<Advert, AdvertEditVM>().ReverseMap();
+            CreateMap<Brand, BrandVM>().ReverseMap();
 
         }
     }
