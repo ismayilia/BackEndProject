@@ -31,6 +31,7 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<ISubscribeServie, SubscribeService>();
 
 
 var app = builder.Build();

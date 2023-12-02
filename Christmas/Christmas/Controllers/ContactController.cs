@@ -34,5 +34,16 @@ namespace Christmas.Controllers
 			};
 			return View(model);
 		}
-	}
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateMessage(ContactMessageCreateVM request)
+        {
+
+            await _contactService.CreateAsync(request);
+
+            return RedirectToAction("Index", "Contact");
+
+        }
+    }
 }

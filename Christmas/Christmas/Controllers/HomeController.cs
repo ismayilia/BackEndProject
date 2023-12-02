@@ -4,7 +4,9 @@ using Christmas.Areas.Admin.ViewModels.Home;
 using Christmas.Areas.Admin.ViewModels.Product;
 using Christmas.Areas.Admin.ViewModels.Review;
 using Christmas.Areas.Admin.ViewModels.Slider;
+using Christmas.Areas.Admin.ViewModels.Subscribe;
 using Christmas.Data;
+using Christmas.Services;
 using Christmas.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,12 +21,14 @@ namespace Christmas.Controllers
         private readonly IReviewService _reviewService;
         private readonly IBlogService _blogService;
         private readonly IProductService _productService;
+        private readonly ISubscribeServie _subscribeService;
 
         public HomeController(AppDbContext context, ISliderService sliderService,
                                                     IAdvertService advertService,
                                                     IReviewService reviewService,
                                                     IBlogService blogService,
-                                                    IProductService productService)
+                                                    IProductService productService,
+                                                    ISubscribeServie subscribeService)
         {
             _context = context;
             //_productService = productService;
@@ -35,6 +39,7 @@ namespace Christmas.Controllers
             _blogService = blogService;
             _productService = productService;
             _productService = productService;
+            _subscribeService = subscribeService;
         }
         public async Task<IActionResult> Index()
         {
@@ -67,5 +72,15 @@ namespace Christmas.Controllers
 
             return PartialView("_ProductsPartial", products);
         }
-    }
+
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
+		{
+
+			await _subscribeService.CreateAsync(subscribe);
+			return RedirectToAction("Index", "Home");
+		}
+	}
 }

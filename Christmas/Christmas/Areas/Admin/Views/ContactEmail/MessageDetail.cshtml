@@ -1,0 +1,16 @@
+﻿@model ContactMessageVM
+@{
+    ViewData["Title"] = "MessageDetail";
+}
+
+<div class="container mt-5">
+    <h3>Message:</h3>
+    <div class="slider-text">
+        <p>@Model.Message</p>
+    </div>
+
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>
+

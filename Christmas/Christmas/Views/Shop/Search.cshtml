@@ -1,0 +1,53 @@
+﻿@model List<Product>
+<div class="container mt-5" style="margin-top:50px;display:flex;flex-wrap:wrap">
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-4 col-md-6 col-12 mb-60">
+
+            <div class="product">
+
+                <!-- Image Wrapper -->
+                <div class="image">
+                    <!-- Image -->
+                    <a href="product-details.html" class="~/img"><img src="~/img/product/@product.Images.FirstOrDefault().Image" alt="Product"></a>
+                    <!-- Wishlist -->
+                    <a href="#" class="wishlist"><i class="fa fa-heart-o"></i></a>
+                    <!-- Label -->
+                    <span class="label">New</span>
+                </div>
+
+                <!-- Content -->
+                <div class="content">
+
+                    <!-- Head Content -->
+                    <div class="head fix">
+
+                        <!-- Title & Category -->
+                        <div class="title-category float-left">
+                            <h5 class="title"><a href="product-details.html">@product.Name</a></h5>
+                            <a href="shop.html" class="category">@product.Category.Name</a>
+                        </div>
+                        <!-- Price -->
+                        <div class="price float-right">
+                            <span class="new">$@product.Price</span>
+                            <!-- Old Price Mockup If Need -->
+                            <!-- <span class="old">$46</span> -->
+                        </div>
+
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="action-button fix">
+                        <a href="#">add to cart</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product End-->
+        <!-- Product Start-->
+    }
+</div>

@@ -3,6 +3,7 @@ using Christmas.Areas.Admin.ViewModels.Blog;
 using Christmas.Areas.Admin.ViewModels.Product;
 using Christmas.Areas.Admin.ViewModels.Review;
 using Christmas.Areas.Admin.ViewModels.Slider;
+using Christmas.Areas.Admin.ViewModels.Subscribe;
 using Christmas.Models;
 
 namespace Christmas.Areas.Admin.ViewModels.Home
@@ -14,5 +15,6 @@ namespace Christmas.Areas.Admin.ViewModels.Home
         public List<ReviewVM> Reviews { get; set; }
         public List<BlogVM> Blogs { get; set; }
         public List<ProductVM> Products { get; set; }
-    }
+		public SubscribeCreateVM Subscribe { get; set; }
+	}
 }
