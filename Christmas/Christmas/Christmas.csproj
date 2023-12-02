@@ -37,8 +37,4 @@
     <EditorConfigFiles Remove="C:\Users\HP\Desktop\BackEndProject\Christmas\Christmas\ViewModels\.editorconfig" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\Admin\" />
-  </ItemGroup>
-
 </Project>

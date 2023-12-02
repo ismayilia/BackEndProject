@@ -3,6 +3,7 @@ using Christmas.Areas.Admin.ViewModels.About;
 using Christmas.Areas.Admin.ViewModels.Advert;
 using Christmas.Areas.Admin.ViewModels.Blog;
 using Christmas.Areas.Admin.ViewModels.Contact;
+using Christmas.Areas.Admin.ViewModels.Customer;
 using Christmas.Areas.Admin.ViewModels.Product;
 using Christmas.Areas.Admin.ViewModels.Review;
 using Christmas.Areas.Admin.ViewModels.Slider;
@@ -40,11 +41,10 @@ namespace Christmas.Helpers.Mappings
             CreateMap<Brand, BrandVM>().ReverseMap();
 			CreateMap<Subscribe, SubscribeVM>();
 			CreateMap<SubscribeCreateVM, Subscribe>();
-
-			//CreateMap<ContactVM, ContactMessageVM>().ReverseMap();
 			CreateMap<ContactEmail, ContactMessageVM>().ReverseMap();
 			CreateMap<ContactMessageCreateVM, ContactEmail>().ReverseMap();
+            CreateMap<Customer, CustomerVM>().ReverseMap();
 
-		}
+        }
     }
 }

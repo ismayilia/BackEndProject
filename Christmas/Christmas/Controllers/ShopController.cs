@@ -1,4 +1,6 @@
-﻿using Christmas.Areas.Admin.ViewModels.Product;
+﻿using AutoMapper;
+using Christmas.Areas.Admin.ViewModels.About;
+using Christmas.Areas.Admin.ViewModels.Product;
 using Christmas.Data;
 using Christmas.Helpers;
 using Christmas.Services.Interfaces;
@@ -11,12 +13,15 @@ namespace Christmas.Controllers
     {
 		private readonly IProductService _productService;
 		private readonly AppDbContext _context;
+		private readonly IMapper _mapper;
 
         public ShopController(IProductService productService,
-			                  AppDbContext context)
+			                  AppDbContext context,
+							  IMapper mapper)
 		{
 			_productService = productService;
 			_context = context;
+			_mapper = mapper;
 		}
 
 		
@@ -40,15 +45,20 @@ namespace Christmas.Controllers
 
         public async Task<IActionResult> Search(string searchText)
         {
+
+			if (searchText == null)
+			{
+				return RedirectToAction("Index", "Home");
+			}
             var products = await _context.Products
             .Include(m => m.Images)
-            .Include(m => m.Category)?
+            .Include(m => m.Category)
             .OrderByDescending(m => m.Id)
             .Where(m => !m.SoftDeleted && m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
             .Take(6)
             .ToListAsync();
 
-            return View(products);
+            return View( _mapper.Map<List<ProductVM>>(products));
         }
     }
 }

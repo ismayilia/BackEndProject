@@ -308,6 +308,7 @@ namespace Christmas.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Desc")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("SoftDeleted")
@@ -340,7 +341,7 @@ namespace Christmas.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("Christmas.Models.Product", b =>

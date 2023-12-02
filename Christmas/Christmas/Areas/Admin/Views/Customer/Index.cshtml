@@ -1,0 +1,55 @@
+﻿@model List<CustomerVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-3">Customers</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        FullName
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <img src="~/img/testimonial/@item.Image" alt="image" />
+                        </td>
+
+                        <td class="py-1">
+                            @item.FullName
+                        </td>
+
+                        <td>
+                            @item.DateTime.ToString("MM/dd/yyyy")
+                        </td>
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

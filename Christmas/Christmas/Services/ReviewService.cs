@@ -4,6 +4,7 @@ using Christmas.Data;
 using Christmas.Services.Interfaces;
 using Christmas.Areas.Admin.ViewModels.Advert;
 using Microsoft.EntityFrameworkCore;
+using Christmas.Models;
 
 namespace Christmas.Services
 {
@@ -11,9 +12,7 @@ namespace Christmas.Services
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
-        //private readonly IProductService _productService;
-        //private readonly IBasketService _basketService;
-        //private readonly ISliderService _sliderService;
+        
 
         public ReviewService(AppDbContext context, IMapper mapper)
         {
@@ -21,11 +20,23 @@ namespace Christmas.Services
             _mapper = mapper;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            Review review = await _context.Reviews.Where(m => m.Id == id).FirstOrDefaultAsync();
+            _context.Reviews.Remove(review);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<List<ReviewVM>> GetAllAsync()
         {
             var reviews = await _context.Reviews.Include(m=>m.Customer).ToListAsync();
 
             return _mapper.Map<List<ReviewVM>>(reviews);
+        }
+
+        public async Task<ReviewVM> GetByIdWithIncludeAsync(int id)
+        {
+            return _mapper.Map<ReviewVM>(await _context.Reviews.Include(m => m.Customer).FirstOrDefaultAsync(m => m.Id == id));
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tnuoJTPDg6Zf1DjlTX3lkLgXLUXcNLQrNMCSKPtej9s=",
+  "Hash": "HXgtzSrNDDFNarR8ldQFVwRU6XxIJqe+qa0yCpiDpZs=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -4231,6 +4231,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\js\\listify.js"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\Admin\\js\\main.js",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "Admin/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\Admin\\js\\mapael.js",
