@@ -7,5 +7,7 @@ namespace Christmas.Services.Interfaces
     public interface IAboutService
     {
         Task<AboutVM> GetDataAsync();
-    }
+        Task<AboutVM> GetByIdAsync(int id);
+		Task EditAsync(AboutEditVM request);
+	}
 }

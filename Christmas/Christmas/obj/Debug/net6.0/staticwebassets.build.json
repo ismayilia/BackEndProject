@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B66EBXldLzBWxcn5OG+kR3dZcsf9MKQCjzNa6k1GkH8=",
+  "Hash": "tnuoJTPDg6Zf1DjlTX3lkLgXLUXcNLQrNMCSKPtej9s=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -37383,12 +37383,12 @@
       "OriginalItemSpec": "wwwroot\\fonts\\ionicons28b5.woff"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\about.jpg",
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\12dc9864-7c80-4fa1-b64a-d1bf96aba242 - about.jpg",
       "SourceId": "Christmas",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
       "BasePath": "_content/Christmas",
-      "RelativePath": "img/about.jpg",
+      "RelativePath": "img/12dc9864-7c80-4fa1-b64a-d1bf96aba242 - about.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -37397,7 +37397,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\about.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\12dc9864-7c80-4fa1-b64a-d1bf96aba242 - about.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\banners\\1.jpg",

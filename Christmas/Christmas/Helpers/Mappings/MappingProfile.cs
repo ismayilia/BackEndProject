@@ -23,11 +23,13 @@ namespace Christmas.Helpers.Mappings
 
             CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
                                            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
-            CreateMap<About, AboutVM>();
+            CreateMap<About, AboutVM>().ReverseMap();
+            CreateMap<About, AboutEditVM>().ReverseMap();
             CreateMap<Team, TeamVM>().ReverseMap();
             CreateMap<Team, TeamCreateVM>().ReverseMap();
             CreateMap<Team, TeamEditVM>().ReverseMap();
             CreateMap<Brand, BrandVM>();
+			CreateMap<Brand, BrandEditVM>().ReverseMap();
 			CreateMap<ContactInfo, ContactVM>();
             CreateMap<Slider, SliderVM>();
             CreateMap<Slider, SliderCreateVM>().ReverseMap();

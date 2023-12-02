@@ -1,0 +1,35 @@
+﻿@model ContactInfo
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mt-3 mb-3">Contact Info</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                        @Model.Desc
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <a class="btn btn-light mt-2" asp-action="Index">Back</a>
+
+</div>
+

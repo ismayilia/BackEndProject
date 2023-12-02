@@ -27,6 +27,7 @@ namespace Christmas.Data
         public DbSet<Setting> Settings { get; set; }
 		public DbSet<ContactEmail> ContactEmails { get; set; }
 		public DbSet<ContactInfo> ContactInfos { get; set; }
+		public DbSet<Subscribe> Subscribes { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,6 +49,7 @@ namespace Christmas.Data
             modelBuilder.Entity<Setting>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<ContactInfo>().HasQueryFilter(m => !m.SoftDeleted);
 			modelBuilder.Entity<ContactEmail>().HasQueryFilter(m => !m.SoftDeleted);
+			modelBuilder.Entity<Subscribe>().HasQueryFilter(m => !m.SoftDeleted);
 		}
     }
 }

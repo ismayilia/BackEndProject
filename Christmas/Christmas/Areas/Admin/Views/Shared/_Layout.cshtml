@@ -252,13 +252,14 @@
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
 							<i class="typcn typcn-film menu-icon"></i>
-							<span class="menu-title">About</span>
+							<span class="menu-title">About Page</span>
 							<i class="menu-arrow"></i>
 						</a>
 						<div class="collapse" id="form-elements">
 							<ul class="nav flex-column sub-menu">
 								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Brand" asp-action="Index">Brand</a></li>
 								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Team" asp-action="Index">Team</a></li>
+								<li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="About" asp-action="Index">About</a></li>
 							</ul>
 						</div>
 					</li>
@@ -314,13 +315,13 @@
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
 							<i class="typcn typcn-globe-outline menu-icon"></i>
-							<span class="menu-title">Error pages</span>
+							<span class="menu-title">Contact</span>
 							<i class="menu-arrow"></i>
 						</a>
 						<div class="collapse" id="error">
 							<ul class="nav flex-column sub-menu">
-								<li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-								<li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+								<li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="ContactInfo" asp-action="Index">Contact Info</a></li>
+								<li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html">Contact Message</a></li>
 							</ul>
 						</div>
 					</li>

@@ -28,7 +28,7 @@
 
             <!-- Mission Content -->
             <div class="about-content col-lg-6 col-12 mb-30">
-                @Model.About.Title
+                @Html.Raw(Model.About.Title)
                 <p>@Model.About.Desc</p>
                 <a href="#" class="button">Shop Now</a>
             </div>
