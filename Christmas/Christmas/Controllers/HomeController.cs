@@ -46,7 +46,7 @@ namespace Christmas.Controllers
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
             List<AdvertVM> adverts = await _advertService.GetAllAsync();
             List<ReviewVM> reviews = await _reviewService.GetAllAsync();
-            List<BlogVM> blogs = await _blogService.GetAllAsync();
+            List<BlogVM> blogs = await _blogService.GetAllWithTakeAsync();
             List<ProductVM> products = await _productService.GetByTakeWithIncludes(3);
 
 

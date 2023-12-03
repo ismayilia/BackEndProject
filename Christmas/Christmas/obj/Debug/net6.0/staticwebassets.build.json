@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HXgtzSrNDDFNarR8ldQFVwRU6XxIJqe+qa0yCpiDpZs=",
+  "Hash": "Z2XBZMgS0I2ehvAJs3qC/sSrCeUZ6GuZ889SdcWWTO0=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -37553,6 +37553,23 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\2.jpg"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/blog/204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\3.jpg",
       "SourceId": "Christmas",
       "SourceType": "Discovered",
@@ -37568,6 +37585,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\7fc63ba9-ff7d-4ce5-bfdd-5483525fc110-about.jpg",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/blog/7fc63ba9-ff7d-4ce5-bfdd-5483525fc110-about.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\7fc63ba9-ff7d-4ce5-bfdd-5483525fc110-about.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\blog-gallery-1.jpg",

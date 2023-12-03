@@ -51,6 +51,9 @@ namespace Christmas.Helpers.Mappings
             CreateMap<Category, CategoryVM>();
             CreateMap<CategoryEditVM, Category>();
             CreateMap<CategoryCreateVM, Category>();
+            CreateMap<BlogVM, BlogEditVM>();
+            CreateMap<Blog, BlogEditVM>().ReverseMap();
+
         }
     }
 }
