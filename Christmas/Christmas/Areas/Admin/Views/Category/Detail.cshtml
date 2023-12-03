@@ -1,0 +1,19 @@
+﻿@model CategoryVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container mt-5 " style="margin-left:30px">
+
+
+
+    <h3 class="mb-3">@Model.Name</h3>
+
+    <p>@Model.DateTime</p>
+
+
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>
+

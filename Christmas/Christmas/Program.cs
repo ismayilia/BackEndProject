@@ -33,6 +33,7 @@ builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<ISubscribeServie, SubscribeService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 
 var app = builder.Build();

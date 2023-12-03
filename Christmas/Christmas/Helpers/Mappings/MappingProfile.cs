@@ -2,6 +2,7 @@
 using Christmas.Areas.Admin.ViewModels.About;
 using Christmas.Areas.Admin.ViewModels.Advert;
 using Christmas.Areas.Admin.ViewModels.Blog;
+using Christmas.Areas.Admin.ViewModels.Category;
 using Christmas.Areas.Admin.ViewModels.Contact;
 using Christmas.Areas.Admin.ViewModels.Customer;
 using Christmas.Areas.Admin.ViewModels.Product;
@@ -44,7 +45,12 @@ namespace Christmas.Helpers.Mappings
 			CreateMap<ContactEmail, ContactMessageVM>().ReverseMap();
 			CreateMap<ContactMessageCreateVM, ContactEmail>().ReverseMap();
             CreateMap<Customer, CustomerVM>().ReverseMap();
-
+            CreateMap<TagCreateVM, Tag>().ReverseMap();
+            CreateMap<TagEditVM, Tag>().ReverseMap();
+            //CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag).ToList()));
+            CreateMap<Category, CategoryVM>();
+            CreateMap<CategoryEditVM, Category>();
+            CreateMap<CategoryCreateVM, Category>();
         }
     }
 }
