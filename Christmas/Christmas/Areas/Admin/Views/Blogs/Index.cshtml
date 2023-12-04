@@ -4,7 +4,7 @@
 }
 
 <div style="margin-right:100px" class="container">
-	<h1 class="text-center mt-3 mb-3">Products</h1>
+	<h1 class="text-center mt-3 mb-3">Blogs</h1>
 	<a class="btn btn-success text-white" asp-action="Create">Create</a>
 	<div class="table-responsive">
 		<table class="table table-striped">
@@ -33,10 +33,7 @@
 				{
 					<tr>
 						<td class="py-1">
-
-
 							<img style="width:150px; height:150px" src="~/img/blog/@blog.Images.FirstOrDefault(m=>m.IsMain).Image" alt="image" />
-
 						</td>
 						<td>
 							@blog.Title

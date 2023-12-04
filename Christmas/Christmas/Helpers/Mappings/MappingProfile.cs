@@ -7,6 +7,7 @@ using Christmas.Areas.Admin.ViewModels.Contact;
 using Christmas.Areas.Admin.ViewModels.Customer;
 using Christmas.Areas.Admin.ViewModels.Product;
 using Christmas.Areas.Admin.ViewModels.Review;
+using Christmas.Areas.Admin.ViewModels.Setting;
 using Christmas.Areas.Admin.ViewModels.Slider;
 using Christmas.Areas.Admin.ViewModels.Subscribe;
 using Christmas.Areas.Admin.ViewModels.Tag;
@@ -53,6 +54,7 @@ namespace Christmas.Helpers.Mappings
             CreateMap<CategoryCreateVM, Category>();
             CreateMap<BlogVM, BlogEditVM>();
             CreateMap<Blog, BlogEditVM>().ReverseMap();
+            CreateMap<Setting, SettingEditVM>().ReverseMap();
 
         }
     }

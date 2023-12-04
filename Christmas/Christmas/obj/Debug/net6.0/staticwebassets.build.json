@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z2XBZMgS0I2ehvAJs3qC/sSrCeUZ6GuZ889SdcWWTO0=",
+  "Hash": "lO1MfTYLfdm6LcyJ/5z9dA3sgy4uxYoZErIXWAtkyS0=",
   "Source": "Christmas",
   "BasePath": "_content/Christmas",
   "Mode": "Default",
@@ -37417,6 +37417,23 @@
       "OriginalItemSpec": "wwwroot\\img\\12dc9864-7c80-4fa1-b64a-d1bf96aba242 - about.jpg"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\2a74a6d5-9919-4015-a636-93f071bbe86d-footer-logo.png",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/2a74a6d5-9919-4015-a636-93f071bbe86d-footer-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\2a74a6d5-9919-4015-a636-93f071bbe86d-footer-logo.png"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\banners\\1.jpg",
       "SourceId": "Christmas",
       "SourceType": "Discovered",
@@ -37519,6 +37536,23 @@
       "OriginalItemSpec": "wwwroot\\img\\bg\\testimonial.png"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\0494a179-c7c0-4597-957e-f35180aa55b1-blog-post-1.jpg",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/blog/0494a179-c7c0-4597-957e-f35180aa55b1-blog-post-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\0494a179-c7c0-4597-957e-f35180aa55b1-blog-post-1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\1.jpg",
       "SourceId": "Christmas",
       "SourceType": "Discovered",
@@ -37553,12 +37587,12 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\2.jpg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg",
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\28575da8-f1f4-4c5d-9331-0e20b4ab188a-chnel-logo - Copy.png",
       "SourceId": "Christmas",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
       "BasePath": "_content/Christmas",
-      "RelativePath": "img/blog/204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg",
+      "RelativePath": "img/blog/28575da8-f1f4-4c5d-9331-0e20b4ab188a-chnel-logo - Copy.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -37567,7 +37601,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\blog\\204a343a-0f71-4213-83e4-af8046ce615c-banner-26.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\blog\\28575da8-f1f4-4c5d-9331-0e20b4ab188a-chnel-logo - Copy.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\3.jpg",
@@ -37585,6 +37619,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\400009ab-3582-4bd5-94f5-58bae8338685-banner-26.jpg",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/blog/400009ab-3582-4bd5-94f5-58bae8338685-banner-26.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\400009ab-3582-4bd5-94f5-58bae8338685-banner-26.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\7fc63ba9-ff7d-4ce5-bfdd-5483525fc110-about.jpg",
@@ -37670,6 +37721,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\details.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\ff3484a0-76f4-4df8-8d00-b55bdef509a0-banner-box2.jpg",
+      "SourceId": "Christmas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
+      "BasePath": "_content/Christmas",
+      "RelativePath": "img/blog/ff3484a0-76f4-4df8-8d00-b55bdef509a0-banner-box2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\blog\\ff3484a0-76f4-4df8-8d00-b55bdef509a0-banner-box2.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\blog\\sidebar-post-1.jpg",
@@ -37908,23 +37976,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\footer-logo.png",
-      "SourceId": "Christmas",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\",
-      "BasePath": "_content/Christmas",
-      "RelativePath": "img/footer-logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\footer-logo.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BackEndProject\\Christmas\\Christmas\\wwwroot\\img\\hero\\1.jpg",
