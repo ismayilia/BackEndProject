@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Christmas.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class DashboardController : Controller
+    public class DashboardController : MainController
     {
         public IActionResult Index()
         {

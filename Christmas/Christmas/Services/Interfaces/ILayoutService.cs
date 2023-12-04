@@ -4,7 +4,7 @@ namespace Christmas.Services.Interfaces
 {
     public interface ILayoutService
     {
-        HeaderVM GetHeaderDatas();
+        Task<HeaderVM> GetHeaderDatas();
         FooterVM GetFooterDatas();
     }
 }

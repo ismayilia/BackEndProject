@@ -1,7 +1,7 @@
 ﻿@inject ILayoutService _layoutService;
 
 @{
-	HeaderVM headerDatas = _layoutService.GetHeaderDatas();
+	HeaderVM headerDatas = await _layoutService.GetHeaderDatas();
 	FooterVM footerDatas = _layoutService.GetFooterDatas();
 }
 <!doctype html>
@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="~/style.css">
 	<!-- Modernizer JS -->
 	<script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+	@RenderSection("css", required:false)
 </head>
 
 <body>
@@ -69,7 +70,28 @@
 									<!-- Account Menu -->
 									<div class="account-menu col-md-4 col-12">
 										<ul>
-											<li><a href="#">My Account</a></li>
+											@if (headerDatas.FullName is not null) @*User.Identity.IsAuthenticated*@
+											{
+												<li class="nav-item">
+													<a class="nav-link" href="#">@headerDatas.FullName</a> @*@User.Identity.Name---Username verir*@
+												</li>
+											}
+
+											@if (User.Identity.IsAuthenticated)
+											{
+												<li>
+													<form asp-controller="Account" asp-action="Logout">
+														<input type="submit" value="Logout" style="background-color:brown; color:white;border:none" />
+
+													</form>
+												</li>
+											}
+											else
+											{
+												<li class=""><a class="px-1" asp-controller="Account" asp-action="Login">Login</a></li>
+												<li class=""><a class="px-1" asp-controller="Account" asp-action="Register">Register</a></li>
+											}
+
 											<li><a href="wishlist.html">Wishlist</a></li>
 											<li>
 												<a href="#" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i><span class="num">2</span></a>
@@ -206,7 +228,7 @@
 								<!-- Footer Widget -->
 								<div class="footer-widget col-lg-4 col-md-6 col-12 mb-40">
 
-									<img class="footer-logo" src="~/img/footer-logo.png" alt="logo">
+									<img class="footer-logo" src="~/img/@footerDatas.Logo" alt="logo">
 									<p>Contrary to popular belief, Lorem Ipsum is nosimply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over Lorem Ipsum is nosimply random text.</p>
 
 								</div>
@@ -286,6 +308,7 @@
 	<!-- Main JS -->
 	<script src="~/js/main.js"></script>
 	<script src="~/js/product.js"></script>
+	<script src="~/js/basket.js"></script>
 	@RenderSection("script", required: false);
 </body>
 

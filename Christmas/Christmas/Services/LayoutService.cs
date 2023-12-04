@@ -1,5 +1,8 @@
 ﻿using Christmas.Areas.Admin.ViewModels.Layout;
+using Christmas.Models;
 using Christmas.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace Christmas.Services
 {
@@ -7,9 +10,14 @@ namespace Christmas.Services
     {
 
         private readonly ISettingService _settingService;
-        public LayoutService(ISettingService settingService)
+		private readonly IHttpContextAccessor _httpContextAccessor;
+		private readonly UserManager<AppUser> _userManager;
+		public LayoutService(ISettingService settingService,IHttpContextAccessor httpContextAccessor,
+                                                            UserManager<AppUser> userManager)
         {
             _settingService = settingService;
+            _httpContextAccessor = httpContextAccessor;
+            _userManager = userManager;
         }
 
         public FooterVM GetFooterDatas()
@@ -27,11 +35,23 @@ namespace Christmas.Services
             };
         }
 
-        public HeaderVM GetHeaderDatas()
+        public async Task<HeaderVM> GetHeaderDatas()
         {
             Dictionary<string, string> settingDatas = _settingService.GetSettings();
 
-            return new HeaderVM()
+			var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+			if (userId is not null)
+			{
+				AppUser currentUser = await _userManager.FindByIdAsync(userId);
+				return new HeaderVM()
+				{
+					Logo = settingDatas["HeaderLogo"],
+                    FullName = currentUser.FullName
+
+				};
+			}
+			return  new HeaderVM()
             {
                 Logo = settingDatas["HeaderLogo"]
             };
