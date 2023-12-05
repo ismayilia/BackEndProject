@@ -28,8 +28,12 @@ namespace Christmas.Data
 		public DbSet<ContactEmail> ContactEmails { get; set; }
 		public DbSet<ContactInfo> ContactInfos { get; set; }
 		public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
@@ -50,6 +54,10 @@ namespace Christmas.Data
             modelBuilder.Entity<ContactInfo>().HasQueryFilter(m => !m.SoftDeleted);
 			modelBuilder.Entity<ContactEmail>().HasQueryFilter(m => !m.SoftDeleted);
 			modelBuilder.Entity<Subscribe>().HasQueryFilter(m => !m.SoftDeleted);
-		}
+            modelBuilder.Entity<Cart>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Wishlist>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<CartProduct>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<WishlistProduct>().HasQueryFilter(m => !m.SoftDeleted);
+        }
     }
 }

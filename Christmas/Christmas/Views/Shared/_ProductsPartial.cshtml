@@ -36,9 +36,18 @@
                 </div>
 
                 <!-- Action Button -->
-                <div class="action-button product-add fix">
-                    <a>add to cart</a>
-                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="action-button product-add fix">
+                        <a >add to cart</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="action-button fix">
+                        <a asp-controller="Account" asp-action="Login">add to cart</a>
+                    </div>
+                }
 
             </div>
 

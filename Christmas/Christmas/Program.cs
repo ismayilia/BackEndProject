@@ -34,6 +34,9 @@ builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<ISubscribeServie, SubscribeService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 
 var app = builder.Build();
