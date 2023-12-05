@@ -52,33 +52,6 @@ namespace Christmas.Controllers
 			return Ok(data);
 		}
 
-		//[HttpPost]
-		//public IActionResult IncrementProductCount(int? id)
-		//{
-		//	if (id is null) return BadRequest();
-		//	var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-		//	var count = baskets.FirstOrDefault(b => b.ProductId == id).Count++;
-
-		//	Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
-
-		//	return Ok(count);
-		//}
-
-		//[HttpPost]
-		//public IActionResult DecrementProductCount(int? id)
-		//{
-		//	if (id is null) return BadRequest();
-		//	var baskets = JsonConvert.DeserializeObject<List<CartVM>>(Request.Cookies["basket"]);
-		//	var product = (baskets.FirstOrDefault(b => b.ProductId == id));
-		//	if (product.Count == 1)
-		//	{
-		//		return Ok();
-		//	}
-		//	var count = product.Count--;
-		//	Response.Cookies.Append("basket", JsonConvert.SerializeObject(baskets));
-
-		//	return Ok(count);
-		//}
 
 		[HttpPost]
 		public async Task<IActionResult> PlusIcon(int id)

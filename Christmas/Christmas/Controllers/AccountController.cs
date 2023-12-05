@@ -4,6 +4,7 @@ using Christmas.Areas.Admin.ViewModels.Wishlist;
 using Christmas.Data;
 using Christmas.Helpers.Enums;
 using Christmas.Models;
+using Christmas.Services;
 using Christmas.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -126,71 +127,69 @@ namespace Christmas.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Login(LoginVM model)
 		{
-			try
+
+			if (!ModelState.IsValid) return View(model);
+
+			AppUser user = await _userManager.FindByEmailAsync(model.EmailOrUsername);
+			if (user == null)
 			{
+				user = await _userManager.FindByNameAsync(model.EmailOrUsername);
+			}
+
+			if (user == null)
+			{
+				ModelState.AddModelError(string.Empty, "Email or password is wrong");
 				if (!ModelState.IsValid) return View(model);
-
-				AppUser user = await _userManager.FindByEmailAsync(model.EmailOrUsername);
-				if (user == null)
-				{
-					user = await _userManager.FindByNameAsync(model.EmailOrUsername);
-				}
-
-				if (user == null)
-				{
-					ModelState.AddModelError(string.Empty, "Email or password is wrong");
-					if (!ModelState.IsValid) return View(model);
-				}
-
-				var res = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
-
-				if (!res.Succeeded)
-				{
-					ModelState.AddModelError(string.Empty, "Email or password is wrong");
-					return View(model);
-				}
-
-				List<CartVM> cartVMs = new();
-				List<WishlistVM> wishlistVMs = new();
-
-				Cart dbCart = await _cartService.GetByUserIdAsync(user.Id);
-				Wishlist dbWishlist = await _wishlistService.GetByUserIdAsync(user.Id);
-
-				if (dbCart is not null)
-				{
-					List<CartProduct> cartProducts = await _cartService.GetAllByCartIdAsync(dbCart.Id);
-
-					foreach (var cartProduct in cartProducts)
-					{
-						cartVMs.Add(new CartVM
-						{
-							ProductId = cartProduct.ProductId,
-							Count = cartProduct.Count
-						});
-					}
-
-					Response.Cookies.Append("basket", JsonConvert.SerializeObject(cartVMs));
-				}
-				if (dbWishlist is not null)
-				{
-					List<WishlistProduct> wishlistProducts = await _wishlistService.GetAllByWishlistIdAsync(dbWishlist.Id);
-					foreach (var wishlistProduct in wishlistProducts)
-					{
-						wishlistVMs.Add(new WishlistVM
-						{
-							ProductId = wishlistProduct.ProductId,
-						});
-					}
-					Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlistVMs));
-				}
-				return RedirectToAction("Index", "Home");
 			}
-			catch (Exception ex)
+
+			var res = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+
+			if (!res.Succeeded)
 			{
-				ViewBag.error = ex.Message;
-				return View();
+				ModelState.AddModelError(string.Empty, "Email or password is wrong");
+				return View(model);
 			}
+
+			List<CartVM> cartVMs = new();
+			List<WishlistVM> wishlistVMs = new();
+
+			Cart dbCart = await _cartService.GetByUserIdAsync(user.Id);
+			Wishlist dbWishlist = await _wishlistService.GetByUserIdAsync(user.Id);
+
+			if (dbCart is not null)
+			{
+				List<CartProduct> cartProducts = await _cartService.GetAllByCartIdAsync(dbCart.Id);
+
+				foreach (var cartProduct in cartProducts)
+				{
+					cartVMs.Add(new CartVM
+					{
+						ProductId = cartProduct.ProductId,
+						Count = cartProduct.Count
+					});
+				}
+
+				Response.Cookies.Append("basket", JsonConvert.SerializeObject(cartVMs));
+			}
+			if (dbWishlist is not null)
+			{
+				List<WishlistProduct> wishlistProducts = await _wishlistService.GetAllByWishlistIdAsync(dbWishlist.Id);
+				foreach (var wishlistProduct in wishlistProducts)
+				{
+					wishlistVMs.Add(new WishlistVM
+					{
+						ProductId = wishlistProduct.ProductId,
+					});
+				}
+				Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlistVMs));
+			}
+			return RedirectToAction("Index", "Home");
+
+
 		}
+
+		//Create Roles Method
+
 
 		//[HttpPost]
 		//[ValidateAntiForgeryToken]
@@ -202,7 +201,6 @@ namespace Christmas.Controllers
 		//}
 
 
-		//Create Roles Method
 
 
 		[HttpPost]
@@ -306,17 +304,22 @@ namespace Christmas.Controllers
 
 			return RedirectToAction("Index", "Home");
 		}
-		[HttpGet]
-		public async Task<IActionResult> CreateRoles()
-		{
-			foreach (var role in Enum.GetValues(typeof(Roles)))
-			{
-				if (!await _roleManager.RoleExistsAsync(role.ToString()))
-				{
-					await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
-				}
-			}
-			return Ok();
-		}
+
+
+		//[HttpGet]
+		//public async Task<IActionResult> CreateRoles()
+		//{
+		//	foreach (var role in Enum.GetValues(typeof(Roles)))
+		//	{
+		//		if (!await _roleManager.RoleExistsAsync(role.ToString()))
+		//		{
+		//			await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+		//		}
+		//	}
+		//	return Ok();
+		//}
+
+
+
 	}
 }
